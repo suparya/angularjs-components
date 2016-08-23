@@ -1,0 +1,14 @@
+/*body {
+    background-color: lightblue;
+}*/
+
+h2 {
+    color: black;
+    text-align: center;
+}
+
+.layout-set {
+    padding-right: 30px;
+    padding-left: 30px;
+    border-style:solid;
+}

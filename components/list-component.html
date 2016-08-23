@@ -1,0 +1,22 @@
+<h1>list of users</h1>
+<div class="container">{{$ctrl.userList}}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="row in $ctrl.userList">
+                <td>{{row.name}}</td>
+                <td>{{row.email}}</td>
+                <td>
+                    <input type="button" class="btn btn-danger btn-xs btn-rounded" ng-click="$ctrl.remove($index);" value="Remove">
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
