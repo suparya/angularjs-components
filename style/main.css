@@ -2,7 +2,8 @@
     background-color: lightblue;
 }*/
 
-h2 {
+
+/*h2 {
     color: black;
     text-align: center;
 }
@@ -10,5 +11,51 @@ h2 {
 .layout-set {
     padding-right: 30px;
     padding-left: 30px;
-    border-style:solid;
+    border-style: solid;
+}*/
+
+/*body {
+    padding: 8px;
+    background-color: lightblue;
+    border: 5px solid red;
+    text-align: center;*/
+    /*background-image: url("images/billi.jpg");
+    background-repeat: no-repeat;*/
+/*}*/
+
+table {
+    color: black;   
 }
+
+
+/*
+.section {
+    text-align: center;
+    display: inline-block;
+}
+
+.section > div.wrap {
+    clear: both;
+}
+
+.section div {
+    position: relative;
+    float: left;
+    padding: 0px 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.section div span {
+    position: absolute;
+    left: 30%;
+    width: 40%;
+    text-align: center;
+}
+
+html,
+body {
+    height: auto;
+    width: 100%;
+}
+*/

@@ -1,0 +1,85 @@
+<div class="tile-body">
+  <div class="form-group">
+    <label class="col-sm-3 control-label">Url : </label>
+    <div class="col-sm-4">
+      <label class="col-sm-3 control-label">/ api /</label>
+      <!-- <span class="col-sm-4">/ api/</span> -->
+      <span class="col-sm-5" style="margin-left: -26px;">
+        <input type="text" name="selectTargetDataSource" class="form-control mb-10" placeholder="API Name" ng-model="$ctrl.urlName">
+      </span>
+    </div>
+  </div>
+  <div class="tile-header dvd dvd-btm">
+    <h3 class="custom-font">
+      <strong>Report Format</strong>
+    </h3>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-10">
+      <label class="checkbox checkbox-custom">
+        <input type="checkbox" checked="checked" ng-model="$ctrl.isArray"><i></i> Array -{{$ctrl.isArray}}</label>
+    </div>
+  </div>
+  <div class="form-group" ng-if="$ctrl.isArray===false">
+    <div class="col-sm-10">
+      <label class="checkbox checkbox-custom">
+        <input type="checkbox" checked="checked" ng-model="$ctrl.isKeyValueIndex"><i></i>Key-Value Index</label>
+    </div>
+  </div>
+  <div ng-if="$ctrl.isKeyValueIndex===false">
+    <div class="tile-header dvd dvd-btm">
+      <h3 class="custom-font">
+        <strong>Define Variables</strong>
+      </h3>
+    </div>
+    <div class="tile-body">
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Name </label>
+        <div class="col-sm-5">
+          <input type="text" name="subformsname" class="form-control mb-10" placeholder="Name" ng-model="$ctrl.variable.name" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Label</label>
+        <div class="col-sm-5">
+          <input type="text" name="label" class="form-control mb-10" placeholder="Name" ng-model="$ctrl.variable.value" required>
+        </div>
+        <button class="btn btn-sm btn-rounded-10 btn-default" ng-click="$ctrl.add();">
+          <i class="fa fa-plus-circle"></i>
+        </button>
+      </div>
+      <div style="padding-right: 20%;padding-left: 9%;">
+        <table class="table table-bordered" style="">
+          <thead style="text-align:center;">
+            <tr>
+              <th width="40%">Name</th>
+              <th width="40%">Value</th>
+              <th width="20%">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="row in $ctrl.variables track by $index">
+              <td>{{row.name}}</td>
+              <td>{{row.value}}</td>
+              <td>
+                <button class="btn btn-danger btn-xs btn-rounded" ng-click="$ctrl.remove(row);" title="Remove Row">
+                  <span><i class="fa fa-times"></i>
+                  </span>
+                </button>
+                <button class="btn btn-primary btn-xs btn-rounded" ng-click="$ctrl.updateRow(row);" title="Update Row">
+                  <span><i class="fa fa-pencil"></i>
+                  </span>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="tile-footer dvd dvd-top text-right">
+    <button type="button" ng-click="$ctrl.reset()" class="btn btn-info mb-10 btn-rounded ">Reset</button>
+    <button type="button" ng-click="$ctrl.cancel()" class="btn btn-warning mb-10 btn-rounded ">Cancel</button>
+    <button type="button" ng-click="$ctrl.addData();" class="btn btn-info mb-10 btn-rounded ">Add</button>
+  </div>
+</div>

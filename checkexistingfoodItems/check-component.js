@@ -34,6 +34,10 @@
             }
             vm.resultingData = {}
             vm.tempName = vm.foodName.toLowerCase().split(" ");
+
+            // vm.test = _.words(vm.foodName.toLowerCase());
+            // console.log(vm.test);
+
             angular.forEach(vm.splitFooditems, function(value, key) {
                 var result = value.filter(function(n) {
                     return vm.tempName.indexOf(n) != -1;

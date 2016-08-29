@@ -1,38 +1,38 @@
-<div class="layout-set">
-<h2>New App</h2>
-
-</div>
-<!-- <h2>Hi</h2>
-<div>
-    <p>Input something in the input box:</p>
-    <p>
-        <input type="text" name="foodname" placeholder="Add food name" ng-model="$ctrl.foodName">
-    </p>
-</div>
-<div>
-    <h3>{{$ctrl.foodName}}</h3>
-</div>
-<div>
-    <input type="button" ng-click="$ctrl.checkExistingFooditems()" value="check">
-</div>
-<div ng-if="$ctrl.resultingData">
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="(key,val) in $ctrl.resultingData">
-                <td>{{key}}</td>
-                <td>{{val}}</td>
-                <td>
-                    <input type="button" class="btn btn-danger btn-xs btn-rounded" ng-click="$ctrl.remove($index);" value="Remove">
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
- -->
+<section>
+    <div class="layout-set">
+        <h2>New App</h2>
+    </div>
+    <h2>Hi</h2>
+    <div>
+        <p>Input something in the input box:</p>
+        <p>
+            <input type="text" name="foodname" placeholder="Add food name" ng-model="$ctrl.foodName">
+        </p>
+    </div>
+    <div>
+        <h3>{{$ctrl.foodName}}</h3>
+    </div>
+    <div>
+        <input type="button" ng-click="$ctrl.checkExistingFooditems()" value="check">
+    </div>
+    <div ng-if="$ctrl.resultingData">
+        <table class="table table-bordered" style="border: 5px solid black;margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="(key,val) in $ctrl.resultingData">
+                    <td>{{key}}</td>
+                    <td>{{val}}</td>
+                    <td>
+                        <input type="button" class="btn btn-danger btn-xs btn-rounded" ng-click="$ctrl.remove($index);" value="Remove">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
